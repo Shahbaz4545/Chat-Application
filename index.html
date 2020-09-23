@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Shahbaz Khan">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <script src="https://use.fontawesome.com/3dfadcef79.js"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JavaScript -->
+    <script src="login.js"></script>
+    <!-- Title -->
+    <title>Chat Application</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logo.png" type="image/png/icon">
+
+</head>
+
+<body>
+    <div class="container boxshadow">
+        <div class="row" id="main-div">
+            <div class="col-lg-5 col-mx-5 col-md-5 col-12 login-main boxshadow-login">
+                <div class="login">
+                    <div class="logo mt-5">
+                        <i class="far fa-user-circle logo"></i>
+                    </div>
+                    <h1 class="mt-5 mb-3 text-center">Sign In</h1>
+                    <input id="login_email" class="text-white form-control-lg" type="text" placeholder="E-mail">
+                    <br><br>
+                    <input id="login_password" class="text-white form-control-lg" type="password" placeholder="Password">
+                    <!-- Sign in button -->
+                    <button onclick="login()" class="btn btn-outline-white btn-rounded btn-block my-4 waves-light z-depth-0 signin"
+                        type="submit">SIGN IN</button>
+
+                    <!-- Sign in button -->
+                    <button onclick="facebook_login()" class="btn btn-outline-white btn-rounded btn-block my-4 waves-light z-depth-0 signin"
+                        type="submit"><i class="fab fa-facebook-f mr-2"></i>SIGN IN WITH FACEBOOK</button>
+
+                    <!-- Register -->
+                    <p class="text-center">Not a member?
+                        <a href="#signupEmail" target="_self" class="font-weight-bold">Register</a>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-mx-5 col-md-5 col-12 login-main boxshadow-login">
+                <div class="login">
+                    <div class="logo mt-5">
+                        <i class="far fa-user-circle logo"></i>
+                    </div>
+                    <h1 class="mt-5 mb-3 text-center">Sign Up</h1>
+                    <input id="signupEmail" class="text-white form-control-lg" type="text" placeholder="E-mail">
+                    <br><br>
+                    <input id="signupPassword" class="text-white form-control-lg" type="password" placeholder="Password">
+                    <!-- Sign UP button -->
+                    <button type="submit" onclick="signup()" class="btn btn-outline-white btn-rounded btn-block my-4 waves-light z-depth-0 signin">SIGN UP</button>
+
+                </div>
+            </div>
+              <!-- Copywrite Text -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="copywrite-text">
+              <h4 style="text-align: center"><a href="#">
+                  <span style="color:#fff"><b>Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script></span> 
+                    <span style="color: aqua;">All rights reserved | Made With </span>
+                    <i style="font-size: 1.2em; color: red;" class="fas fa-heart"></i>
+                    <span style="color:#fff"> by Shahbaz Khan</b></span></a>
+              </h4>
+
+            </div>
+          </div>
+        </div>
+        
+    </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyCo1dG2vSSBaHo5wgXDi2-4yokkd7LdFww",
+          authDomain: "chat-app-76670.firebaseapp.com",
+          databaseURL: "https://chat-app-76670.firebaseio.com",
+          projectId: "chat-app-76670",
+          storageBucket: "chat-app-76670.appspot.com",
+          messagingSenderId: "76041958131",
+          appId: "1:76041958131:web:1b644f05b825b92b753d86",
+          measurementId: "G-6LJ8XG1V12"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
